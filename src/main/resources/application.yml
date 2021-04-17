@@ -1,0 +1,19 @@
+server.port: 9010
+
+spring:
+    jpa:
+        # This `ddl-auto` property has different defaults depending on the database we use.
+        # If we use an embedded database (H2, HSQL, or Derby),
+        # it defaults to `create-drop`; otherwise, it defaults to `none`.
+        hibernate.ddl-auto: update
+
+        # Set these 2 properties to `true` when we need to see the SQL.
+        show-sql: true
+        properties.hibernate.format_sql: true
+    datasource:
+        url: jdbc:postgresql://john.db.elephantsql.com:5432/sumtsrsf
+        username: sumtsrsf
+        password: zjDVe1suj-n3rzVwxuQywvKrxsVStP_m
+
+    main:
+        web-application-type: none
