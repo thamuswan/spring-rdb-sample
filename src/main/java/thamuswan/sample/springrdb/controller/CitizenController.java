@@ -8,6 +8,7 @@ package thamuswan.sample.springrdb.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import thamuswan.sample.springrdb.controller.request.CitizenRequest;
 import thamuswan.sample.springrdb.model.Citizen;
@@ -17,16 +18,16 @@ import thamuswan.sample.springrdb.service.CitizenService;
  *
  * @author Thanawat Muangsawang
  */
-@RestController("citizen")
+@RestController()
+@RequestMapping("citizen")
 public class CitizenController {
 
     @Autowired
     CitizenService citizenService;
-    
-    
-    @PostMapping
+
+    @PostMapping()
     public Citizen createCitizen(@RequestBody CitizenRequest citizenRequest) {
         return null; // TODO
-    } 
+    }
 
 }
